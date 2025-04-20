@@ -20,7 +20,7 @@ function App() {
     const formData = new FormData()
     formData.append('file', file)
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData)
+      const res = await axios.post('https://notes2qr.onrender.com/upload', formData)
       setQr(res.data.qr)
     } catch (err) {
       alert('Upload failed.')
